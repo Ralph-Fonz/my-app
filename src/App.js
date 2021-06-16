@@ -1,19 +1,17 @@
 import React from "react";
 import "./styles.css";
+import NavBar from './Nav-Bar'; 
 
 
 
-function App () {
+function App (props) {
   return ( 
 
 <div>
   <body>
   <img src ="/images/D2R.jpg" alt = "Diablo 2 Resurrected" />
   
-
-  <div class= "w3-container w3-blue w3-border">
-    Hi
-  </div>
+<NavBar name = "About" />
   </body>
 </div>
 
