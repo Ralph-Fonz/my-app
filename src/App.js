@@ -1,6 +1,8 @@
 import React from "react";
 import "./styles.css";
-import NavBar from './Nav-Bar'; 
+import DList from './Nav-Bar'; 
+
+
 
 
 
@@ -10,8 +12,15 @@ function App (props) {
 <div>
   <body>
   <img src ="/images/D2R.jpg" alt = "Diablo 2 Resurrected" />
+  <ul>
+  <li><a href="default.asp">Home</a></li>
+  <li><a href="news.asp">News</a></li>
+  <li><a href="contact.asp">Contact</a></li>
+  <li><a href="about.asp">About</a></li>
+</ul>
   
-<NavBar name = "About" />
+  DList = 
+
   </body>
 </div>
 

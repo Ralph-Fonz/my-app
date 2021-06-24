@@ -1,17 +1,22 @@
 body {
-    background-color:black;
-    opacity: 0.8;
+  background-color: black;
+  opacity: 0.8;
 }
 
 img {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 75vh;
-
-
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 75vh;
 }
 
-Nav {
-    color: tomato;
+w3-container {
+  color: red;
+}
+
+ul {
+  color: red;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
