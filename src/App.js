@@ -1,6 +1,7 @@
 import React from "react";
 import "./styles.css";
 import NavBarComponent from "./nav-bar1";
+import trailer from "./trailer";
 
 
 
@@ -17,7 +18,12 @@ function App (props) {
 <div>
   
   <img src ="/images/D2R.jpg" alt = "Diablo 2 Resurrected" />
- <NavBarComponent> Hello </NavBarComponent>
+ <NavBarComponent classname = "navbar"> 
+
+ </NavBarComponent>
+ <trailer>
+
+ </trailer>
   
 
 
