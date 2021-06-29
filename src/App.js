@@ -1,27 +1,27 @@
 import React from "react";
 import "./styles.css";
-import DList from './Nav-Bar'; 
+import NavBarComponent from "./nav-bar1";
 
 
 
 
 
 function App (props) {
+  const D2chars = ["Amazon", "Necromancer", "Barbarian"];
+    console.log (D2chars);
+  
+  
+  
   return ( 
 
 <div>
-  <body>
-  <img src ="/images/D2R.jpg" alt = "Diablo 2 Resurrected" />
-  <ul>
-  <li><a href="default.asp">Home</a></li>
-  <li><a href="news.asp">News</a></li>
-  <li><a href="contact.asp">Contact</a></li>
-  <li><a href="about.asp">About</a></li>
-</ul>
   
-  DList = 
+  <img src ="/images/D2R.jpg" alt = "Diablo 2 Resurrected" />
+ <NavBarComponent> Hello </NavBarComponent>
+  
 
-  </body>
+
+  
 </div>
 
   );
