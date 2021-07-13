@@ -21,5 +21,14 @@ ul {
   padding: 0;
 }
 
-#navbar {
+#classes {
+  display: flex;
+  justify-content: center;
+}
+
+.d2classes {
+  display: flex;
+  align-items: flex-end;
+  max-width: 350px;
+  text-align: center;
 }

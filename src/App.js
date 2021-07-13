@@ -4,13 +4,45 @@ import NavBarComponent from "./nav-bar1";
 import trailer from "./trailer";
 
 
-
+const classes = [
+  {
+    "id": 1,
+    "category": "characters",
+    "image": "Amazon.jpg",
+    "name": "Amazon",
+    "description": "A master of the javelin and bow, the Amazon reacts to combat situations with superhuman agility. She relies on magic prowess to enhance her significant martial abilities"
+  },
+  {
+    "id": 2,
+    "category": "characters",
+    "image": "Assassin.jpg",
+    "name": "Assassin",
+    "description": "A member of an ancient Vizjerei order founded to hunt down mages gone rogue, the Assassin is a martial arts expert who uses deadly traps and shadow disciplines to vanquish evil."
+  },
+  {
+    "id": 3,
+    "category": "characters",
+    "image": "Necromancer.jpg",
+    "name": "Necromancer",
+    "description": "A Necromancer’s dominion over life and death grants this grisly apothecary the ability to summon skeleton armies and golems, and to unleash baneful poison, curse, and bone skills upon his foes."
+  }
+]
 
 
 function App (props) {
   const D2chars = ["Amazon", "Necromancer", "Barbarian"];
-    console.log (D2chars);
-  
+    console.log (D2chars.push("Paladin"));
+   function renderClass(c) {
+   return (
+     <div key={c.id} className="d2classes">
+       <a href="/">
+           <img src={`/images/${c.image}`} alt={c.name} />
+          <h3>{c.name}</h3>
+         <p>${c.description}</p>
+         </a>
+       </div>
+     );
+   }
   
   
   return ( 
@@ -21,9 +53,8 @@ function App (props) {
  <NavBarComponent classname = "navbar"> 
 
  </NavBarComponent>
- <trailer>
-
- </trailer>
+ 
+ <section id ="classes">{classes.map(renderClass)}</section>
   
 
 
