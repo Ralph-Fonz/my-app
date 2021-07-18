@@ -3,7 +3,7 @@ import React from 'react';
 const NavBarComponent = (props) => {
     
     return (
-        <ul>
+        <ul className = "Nav-Bar1">
   <li><a href="default.asp">Home</a></li>
   <li><a href="news.asp">News</a></li>
   <li><a href="contact.asp">Contact</a></li>

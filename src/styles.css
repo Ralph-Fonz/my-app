@@ -1,6 +1,7 @@
 body {
-  background-color: white;
+  background-color: black;
   opacity: 0.8;
+  color: #e9c964;
 }
 
 img {
@@ -23,12 +24,22 @@ ul {
 
 #classes {
   display: flex;
-  justify-content: center;
+  justify-content: right;
 }
 
 .d2classes {
-  display: flex;
-  align-items: flex-end;
+  display: inline;
+  align-items: flex-start;
   max-width: 350px;
   text-align: center;
+  color: #e9c964;
+}
+
+.descript {
+  align-items: flex-start;
+}
+
+.Nav-Bar1 {
+  font-size: x-large;
+  color: #e9c964;
 }

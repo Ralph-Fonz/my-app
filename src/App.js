@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import "./styles.css";
 import NavBarComponent from "./nav-bar1";
 import trailer from "./trailer";
@@ -30,39 +30,60 @@ const classes = [
 
 
 function App (props) {
+  const [name, setName] = useState("")
   const D2chars = ["Amazon", "Necromancer", "Barbarian"];
     console.log (D2chars.push("Paladin"));
-   function renderClass(c) {
-   return (
-     <div key={c.id} className="d2classes">
+   
+   
+   
+   
+   
+   
+   
+   
+    function renderClass(c) {
+    return (
+      <div key={c.id} className="d2classes">
        <a href="/">
            <img src={`/images/${c.image}`} alt={c.name} />
           <h3>{c.name}</h3>
-         <p>${c.description}</p>
+         <p id = "descript" >${c.description}</p>
          </a>
        </div>
+    );
+    }
+    const filteredClasses = name 
+    ? classes.filter((c) => c.name.find((s) => s.name === parseInt(name)))
+    :classes;
+    
+    return ( 
+    <main>
+       <section id="filters">
+       <label htmlFor="character">Choose Character:</label>{" "}
+       <select id="Character" value = {name} onChange ={(e) => 
+        setName(e.target.value)}>
+         <option value="">All Characters</option>
+         <option value="Amazon">Amazon</option>
+         <option value="Assassin">Assassin</option>
+         <option value="Necromancer">Necromancer</option>
+       </select>
+     </section>
+     <div>
+  <img src ="/images/D2R.jpg" alt = "Diablo 2 Resurrected" />
+ <NavBarComponent> 
+ </NavBarComponent>
+ <section id ="classes">{filteredClasses.map(renderClass)}</section>
+ </div>
+  
+     </main>
      );
    }
   
   
-  return ( 
-
-<div>
-  
-  <img src ="/images/D2R.jpg" alt = "Diablo 2 Resurrected" />
- <NavBarComponent classname = "navbar"> 
-
- </NavBarComponent>
  
- <section id ="classes">{classes.map(renderClass)}</section>
-  
 
 
-  
-</div>
 
-  );
-}
 
 
 export default App 
