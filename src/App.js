@@ -29,10 +29,9 @@ const classes = [
 ]
 
 
-function App (props) {
+function App () {
   const [name, setName] = useState("")
-  const D2chars = ["Amazon", "Necromancer", "Barbarian"];
-    console.log (D2chars.push("Paladin"));
+
    
    
    
@@ -52,8 +51,9 @@ function App (props) {
        </div>
     );
     }
+    //filter name from classes array and display on page based on name
     const filteredClasses = name 
-    ? classes.filter((c) => c.name.find((s) => s.name === parseInt(name)))
+    ? classes.filter((c) => c.name === parseInt(name))
     :classes;
     
     return ( 
