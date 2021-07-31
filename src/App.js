@@ -2,6 +2,7 @@ import React, {useState} from "react";
 import "./styles.css";
 import NavBarComponent from "./nav-bar1";
 import trailer from "./trailer";
+import SideBar from "./sidebar";
 
 
 const classes = [
@@ -32,17 +33,9 @@ const classes = [
 function App () {
   const [name, setName] = useState("")
 
-   
-   
-   
-   
-   
-   
-   
-   
-    function renderClass(c) {
-    return (
-      <div key={c.id} className="d2classes">
+function renderClass(c) {
+  return (
+  <div key={c.id} className="d2classes">
        <a href="/">
            <img src={`/images/${c.image}`} alt={c.name} />
           <h3>{c.name}</h3>
@@ -74,6 +67,10 @@ function App () {
  </NavBarComponent>
  <section id ="classes">{filteredClasses.map(renderClass)}</section>
  </div>
+<div>
+<SideBar
+/>
+</div>
   
      </main>
      );
